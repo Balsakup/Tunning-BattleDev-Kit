@@ -11,7 +11,7 @@ Puis il suffit de lancer la commande
 $ php src/run.php exo_1
 ``` 
 
-Si vous exercice est bon, il ne vous reste plus qu'à copier / coller le code du fichier `index.php` de l'exercice local à la suite des instructions de l'éditeur de la BattleDev.
+Si votre exercice est bon, il ne vous reste plus qu'à copier / coller le code du fichier `index.php` de l'exercice local à la suite des instructions de l'éditeur de la BattleDev.
 
 ## Demo
 Une démo est dispo dans le dossier `demo`.
