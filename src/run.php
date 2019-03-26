@@ -19,7 +19,20 @@ if ($command === 'demo') {
     }
 }
 
-foreach (scandir($path . '/data') as $filename) {
+$files = scandir($path . '/data');
+$filesCount = 0;
+
+foreach ($files as $file) {
+    if (preg_match('/\.txt$/', $file)) {
+        $filesCount++;
+    }
+}
+
+if (0 === $filesCount) {
+    printf('%sAucun fichier de test pour l\'exercice', "\033[1;31m");
+}
+
+foreach ($files as $filename) {
     if ((preg_match('/^input(?<id>\d+)\.txt$/', $filename, $matches)) && file_exists($path . '/data/output' . $matches['id'] . '.txt')) {
         $inputFile    = $path . '/data/input'  . $matches['id'] . '.txt';
         $outputFile   = $path . '/data/output' . $matches['id'] . '.txt';
